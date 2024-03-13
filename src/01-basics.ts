@@ -57,9 +57,15 @@ const friend1 = {
       extension: 125,
     },
   };
-  const colleagues = {
+  
+  export const colleagues : ColleagueHistory = {
     current: [colleague1, colleague2, colleague3],
     former: [],
   };
   
   console.log(colleagues.current[0]);
+
+  interface ColleagueHistory {
+    current: Colleague[],
+    former: Colleague[]
+  }
