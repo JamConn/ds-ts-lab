@@ -34,7 +34,6 @@ function highestExtension(cs: Colleague[]) { // Inferred retun type
 
     const highest = highestExtension(colleagues)
   
-    // Assign the new colleague the highest extension number plus one
     const newColleague: Colleague = {
       name,
       department,
@@ -83,6 +82,18 @@ function highestExtension(cs: Colleague[]) { // Inferred retun type
   
     return filteredFriends;
   }
+
+
+  function addInterest(friend: Friend, newInterest: string): string[] {
+    if (!friend.interests) {
+      friend.interests = [];
+    }
+    friend.interests.push(newInterest);
+    return friend.interests;
+  }
+
+
+  console.log(addInterest(friends[0], 'Politics'))
   
 
 
